@@ -1,0 +1,14 @@
+def armstrong(num):
+    digits=len(num)
+    temp=int(num)
+    sum=0
+    while(temp!=0):
+        lastdigit=temp%10#lastnum
+        temp=temp//10#check the last digit
+        sum=sum+pow(lastdigit,digits)
+    if(sum == int(num)):
+        return ("armstrong")
+    else:
+        return ("not an armstrong")
+n=input("enter the num")
+print(armstrong(n))
